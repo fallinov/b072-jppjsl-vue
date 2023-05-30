@@ -20,7 +20,8 @@ const router = createRouter({
     {
       path: '/sabre/:id',
       name: 'sabre',
-      component: FicheSabreView
+      component: FicheSabreView,
+      props: true
     }
   ]
 })

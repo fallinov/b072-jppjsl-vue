@@ -1,7 +1,7 @@
 const sabres = [
   {
     id: 445,
-    name: 'SL-VAD',
+    nom: 'SL-VAD',
     image: 'sl-vad.jpg',
     stock: 4,
     prix: 399,
@@ -12,7 +12,7 @@ const sabres = [
   },
   {
     id: 4,
-    name: 'SL-SKY',
+    nom: 'SL-SKY',
     image: 'sl-sky.jpg',
     stock: 0,
     prix: 399,
@@ -24,7 +24,7 @@ const sabres = [
   },
   {
     id: 67,
-    name: 'SL-OBI 1',
+    nom: 'SL-OBI 1',
     image: 'sl-obi.jpg',
     stock: 22,
     prix: 379,
@@ -34,7 +34,7 @@ const sabres = [
   },
   {
     id: 99,
-    name: 'SL-CAL',
+    nom: 'SL-CAL',
     image: 'sl-vad.jpg',
     stock: 8,
     prix: 399,
@@ -44,7 +44,7 @@ const sabres = [
   },
   {
     id: 111,
-    name: 'SL-TANO-curve',
+    nom: 'SL-TANO-curve',
     image: 'sl-tano-curve.jpg',
     stock: 15,
     prix: 699,
@@ -54,7 +54,7 @@ const sabres = [
   },
   {
     id: 345,
-    name: 'SL-PIKE',
+    nom: 'SL-PIKE',
     image: 'sl-pike.jpg',
     stock: 2,
     prix: 189,
@@ -65,7 +65,7 @@ const sabres = [
   },
   {
     id: 373,
-    name: 'SL-Opress',
+    nom: 'SL-Opress',
     image: 'sl-opress.jpg',
     stock: 6,
     prix: 499,
@@ -75,4 +75,3 @@ const sabres = [
       'Idéal pour compléter un cosplay, étudié pour le combat.'
   },
 ]
-export default sabres

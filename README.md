@@ -22,7 +22,7 @@
 * Intégrer le code CSS des pages dans les composants correspondants.
 * Tester que l'affichage des pages est correct.
 * Ajouter le tableau JavaScript des sabres du fichier `_sources/sabres.js` dans 
-  `App.vue`.
+  `AccueilView.vue`.
 * Parcourir le tableau des sabres pour afficher les informations de chaque sabre.
 * Créer un composant `Sabre.vue` pour afficher les informations d'un sabre.
 * Intégrer le composant `Sabre.vue` dans `App.vue` pour afficher les sabres.
