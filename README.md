@@ -1,7 +1,7 @@
 # Je peux pas, j'ai sabre laser
 
 ## Objectif
-Créer une application Vue.js à partir du site Je peux pas, j'ai sabre laser 
+Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_ 
 que vous trouverez dans le dossier `_sources/` de ce dépôt.
 
 ## Etapes
@@ -18,7 +18,7 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
 * Intégrer le **CSS** et les **médias** (images, icônes) du site dans 
   l'application. N'oubliez d'importer `normalize.css`
   * Copier les fichiers CSS dans `src/assets/`
-  * Copier les médias (image et icones) dans `public/`
+  * Copier les médias (image et icônes) dans `public/`
     * Mettre les images dans `public/img/`
 * Modifier le **titre** de l'application dans `src/index.html`
   * `<title>J&#039;peux pas j&#039;ai sabre laser</title>`
