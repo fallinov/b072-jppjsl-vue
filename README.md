@@ -4,6 +4,18 @@
 Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_ 
 que vous trouverez dans le dossier `_sources/` de ce dépôt.
 
+### Particularités liés au stock
+Dans la liste des sabres, sur la page d'accueil, 
+si un sabre a un **stock inférieur à 1**, on y ajoute la classe CSS `rupture` 
+et on affiche le paragraphe suivant juste avant son titre `<h2>`.
+```html 
+<p>Noooon, les stocks sont vides !</p>
+```
+---
+Dans la fiche de détail d'un sabre, si un sabre à un `stock plus grand que 10`,
+on n'affichera pas le nombre en stock, mais la phrase suivante.
+`<li>Stock: plus de 10 pièces</li>`.
+
 ## Etapes
 
 ### 1. Initialisation
