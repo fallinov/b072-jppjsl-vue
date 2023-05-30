@@ -150,3 +150,16 @@ footer {
 .page-accueil .sabres li:hover figcaption {
     background-color: #6bbbda;
 }
+
+/********** STYLE PAGE SERVICE CLIENTS *********/
+.manuels {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    align-content: center;
+    justify-content: center;
+}
+
+.manuels img {
+    max-width: 150px;
+}
