@@ -1,12 +1,13 @@
 <script setup>
-import { useSabresStore } from '@/stores/sabres'
 // Définition des propriétés du composant
+// Rappel : on injecte l'id dans ce composant à partir de la route, de l'URL
 const props = defineProps(['id'])
-// Récupération du magasin des sabres
+// Import du magasin des sabres
+import { useSabresStore } from '@/stores/sabres'
+// Création d'une instance du magasin des sabres pour le composant
 const storeSabres = useSabresStore()
 // Récupération des données du sabre à afficher en fonction de l'id passé en props
-// Pour rappel, on injecte l'id dans ce composant à partir de la route, de l'URL
-const sabre = storeSabres.sabre(props.id)
+const sabre = storeSabres.getSabreById(props.id)
 </script>
 
 <template>
@@ -54,5 +55,4 @@ const sabre = storeSabres.sabre(props.id)
 .page-sabre ul.details li:nth-child(odd) {
   background-color: #eeeeee;
 }
-
 </style>

@@ -1,8 +1,10 @@
 import { defineStore } from 'pinia'
 
 export const useSabresStore = defineStore('sabres', {
+  /* Définition des données du magasin
+  On ne doit jamais accéder directement aux données du magasin,
+  on utilise les getters */
   state: () => ({
-    name: 'Steve',
     sabres: [
       {
         id: 445,
@@ -14,7 +16,9 @@ export const useSabresStore = defineStore('sabres', {
         longueur: 28,
         description:
           'Le SL-VAD est un sabre laser de la gamme REPLIKA. Inspiré' +
-          ' par le sabre du méchant le plus iconique du cinéma, Dark Vador, tel qu’on peut le voir dans la saga Star Wars, version Empire, Episode IV, IV et VI. (réplique non officielle).'
+          ' par le sabre du méchant le plus iconique du cinéma, Dark Vador,' +
+          'tel qu’on peut le voir dans la saga Star Wars, version Empire,' +
+          'Episode IV, IV et VI. (réplique non officielle).'
       },
       {
         id: 4,
@@ -38,7 +42,9 @@ export const useSabresStore = defineStore('sabres', {
         poids: 1.5,
         longueur: 28.5,
         description:
-          'Le SL-OBI 1 est une de nos dernières sorties sabre de la gamme REPLIKA. Inspiré par le sabre de Obi-wan Kenobi version Episode I (réplique non officielle).'
+          'Le SL-OBI 1 est une de nos dernières sorties sabre de la gamme' +
+          'REPLIKA. Inspiré par le sabre de Obi-wan Kenobi version Episode I ' +
+          '(réplique non officielle).'
       },
       {
         id: 99,
@@ -49,7 +55,9 @@ export const useSabresStore = defineStore('sabres', {
         poids: 0.6,
         longueur: 38,
         description:
-          'Le SL-Cal est un sabre laser de la gamme REPLIKA. Inspiré par le sabre de Cal Kestis, dans le jeu « Fallen Order » (réplique non officielle).'
+          'Le SL-Cal est un sabre laser de la gamme REPLIKA.' +
+          'Inspiré par le sabre de Cal Kestis,' +
+          'dans le jeu « Fallen Order » (réplique non officielle).'
       },
       {
         id: 111,
@@ -60,7 +68,9 @@ export const useSabresStore = defineStore('sabres', {
         poids: 0.6,
         longueur: 27.5,
         description:
-          'Les SL-TANO Curve sont deux de nos dernières sorties sabre de la gamme REPLIKA. Inspirés par les doubles sabres d’Ashoka Tano version Mandalorian (réplique non officielle).'
+          'Les SL-TANO Curve sont deux de nos dernières sorties sabre de' +
+          'la gamme REPLIKA. Inspirés par les doubles sabres d’Ashoka' +
+          'Tano version Mandalorian (réplique non officielle).'
       },
       {
         id: 345,
@@ -88,8 +98,12 @@ export const useSabresStore = defineStore('sabres', {
       }
     ]
   }),
+  /* Définition des getters du magasin
+  Les getters permettent d'accéder aux données du magasin */
   getters: {
-    sabre: (state) => (id) => state.sabres.find((s) => s.id === Number(id)),
-    sabreAZ: (state) => state.sabres.sort((a, b) => a.nom.localeCompare(b.nom))
+    // Retourne le tableau des sabres
+    getSabres: (state) => state.sabres,
+    getSabreById: (state) => (id) => state.sabres.find((s) => s.id === Number(id)),
+    getSabresAZ: (state) => state.sabres.sort((a, b) => a.nom.localeCompare(b.nom, 'fr'))
   }
 })

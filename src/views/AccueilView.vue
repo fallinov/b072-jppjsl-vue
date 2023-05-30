@@ -4,7 +4,7 @@ import { useSabresStore } from '@/stores/sabres'
 // Récupération du magasin des sabres
 const storeSabres = useSabresStore()
 // Récupération des données des sabres triés par ordre alphabétique
-const sabres = storeSabres.sabreAZ
+const sabres = storeSabres.getSabresAZ
 </script>
 
 <template>

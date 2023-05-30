@@ -1,6 +1,4 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
   <main class="page-service-client">
@@ -61,5 +59,4 @@
 .page-service-client .manuels img {
   max-width: 190px;
 }
-
 </style>
