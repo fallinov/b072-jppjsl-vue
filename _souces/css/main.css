@@ -22,7 +22,12 @@ h1 {
     margin-bottom: 2em;
 }
 
+h1 strong {
+    text-shadow: 0 0.03rem 0.06rem rgba(231, 40, 84, 0.5), 0 0.1rem 0.3rem rgba(231, 40, 84, 0.5);
+}
+
 p {
+    font-size: 1.1em;
     line-height: 1.5;
 }
 
@@ -42,7 +47,6 @@ a:hover {
 
 strong {
     color: #6bbbda;
-    text-shadow: 0 0.03rem 0.06rem rgba(231, 40, 84, 0.5), 0 0.1rem 0.3rem rgba(231, 40, 84, 0.5);
 }
 
 .bouton,
@@ -152,14 +156,41 @@ footer {
 }
 
 /********** STYLE PAGE SERVICE CLIENTS *********/
-.manuels {
+.page-service-client main {
+    max-width: 660px;
+}
+.page-service-client .manuels {
     margin: 2rem 0;
     display: flex;
     gap: 1rem;
     align-content: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.manuels img {
-    max-width: 150px;
+.page-service-client .manuels a {
+    transition: all 0.2s ease-in-out;
+}
+
+.page-service-client .manuels a:hover {
+    transform: scale(1.1);
+}
+
+.page-service-client .manuels img {
+    max-width: 190px;
+}
+
+/********** STYLE PAGE SABRE *********/
+.page-sabre .sabre {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.page-sabre ul.details {
+    padding-left: 1em;
+    margin: 1rem 0;
+}
+
+.page-sabre ul.details li {
+    padding: .25em 0;
 }
