@@ -1,4 +1,4 @@
-import {defineStore} from "pinia";
+import { defineStore } from 'pinia'
 
 export const useSabresStore = defineStore('sabres', {
   state: () => ({
@@ -12,7 +12,8 @@ export const useSabresStore = defineStore('sabres', {
         prix: 399,
         poids: 1.5,
         longueur: 28,
-        description: 'Le SL-VAD est un sabre laser de la gamme REPLIKA. Inspiré' +
+        description:
+          'Le SL-VAD est un sabre laser de la gamme REPLIKA. Inspiré' +
           ' par le sabre du méchant le plus iconique du cinéma, Dark Vador, tel qu’on peut le voir dans la saga Star Wars, version Empire, Episode IV, IV et VI. (réplique non officielle).'
       },
       {
@@ -23,7 +24,8 @@ export const useSabresStore = defineStore('sabres', {
         prix: 399,
         poids: 0.999,
         longueur: 28,
-        description: 'Le SL-Sky (V2) est le premier sabre de la gamme REPLIKA.' +
+        description:
+          'Le SL-Sky (V2) est le premier sabre de la gamme REPLIKA.' +
           ' Inspiré par le sabre de Luke Skywalker, version « Retour du Jedi ».' +
           ' (réplique non officielle).'
       },
@@ -35,7 +37,8 @@ export const useSabresStore = defineStore('sabres', {
         prix: 379,
         poids: 1.5,
         longueur: 28.5,
-        description: 'Le SL-OBI 1 est une de nos dernières sorties sabre de la gamme REPLIKA. Inspiré par le sabre de Obi-wan Kenobi version Episode I (réplique non officielle).'
+        description:
+          'Le SL-OBI 1 est une de nos dernières sorties sabre de la gamme REPLIKA. Inspiré par le sabre de Obi-wan Kenobi version Episode I (réplique non officielle).'
       },
       {
         id: 99,
@@ -45,7 +48,8 @@ export const useSabresStore = defineStore('sabres', {
         prix: 399,
         poids: 0.6,
         longueur: 38,
-        description: 'Le SL-Cal est un sabre laser de la gamme REPLIKA. Inspiré par le sabre de Cal Kestis, dans le jeu « Fallen Order » (réplique non officielle).'
+        description:
+          'Le SL-Cal est un sabre laser de la gamme REPLIKA. Inspiré par le sabre de Cal Kestis, dans le jeu « Fallen Order » (réplique non officielle).'
       },
       {
         id: 111,
@@ -55,7 +59,8 @@ export const useSabresStore = defineStore('sabres', {
         prix: 699,
         poids: 0.6,
         longueur: 27.5,
-        description: 'Les SL-TANO Curve sont deux de nos dernières sorties sabre de la gamme REPLIKA. Inspirés par les doubles sabres d’Ashoka Tano version Mandalorian (réplique non officielle).'
+        description:
+          'Les SL-TANO Curve sont deux de nos dernières sorties sabre de la gamme REPLIKA. Inspirés par les doubles sabres d’Ashoka Tano version Mandalorian (réplique non officielle).'
       },
       {
         id: 345,
@@ -65,7 +70,8 @@ export const useSabresStore = defineStore('sabres', {
         prix: 189,
         poids: 1.9,
         longueur: 69,
-        description: 'La SL-PIKE est notre modèle de lance laser de référence ! ' +
+        description:
+          'La SL-PIKE est notre modèle de lance laser de référence ! ' +
           'Idéal pour compléter un cosplay, étudié pour le combat.'
       },
       {
@@ -76,13 +82,14 @@ export const useSabresStore = defineStore('sabres', {
         prix: 499,
         poids: 1.5,
         longueur: 65,
-        description: 'La SL-PIKE est notre modèle de lance laser de référence ! ' +
+        description:
+          'La SL-PIKE est notre modèle de lance laser de référence ! ' +
           'Idéal pour compléter un cosplay, étudié pour le combat.'
-      },
+      }
     ]
   }),
   getters: {
-    sabre: (state) => (id) => state.sabres.find(s => s.id === Number(id)),
+    sabre: (state) => (id) => state.sabres.find((s) => s.id === Number(id)),
     sabreAZ: (state) => state.sabres.sort((a, b) => a.nom.localeCompare(b.nom))
   }
 })

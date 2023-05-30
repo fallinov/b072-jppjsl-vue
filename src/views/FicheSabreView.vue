@@ -1,5 +1,5 @@
 <script setup>
-import {useSabresStore} from "@/stores/sabres";
+import { useSabresStore } from '@/stores/sabres'
 // Définition des propriétés du composant
 const props = defineProps(['id'])
 // Récupération du magasin des sabres
@@ -14,14 +14,14 @@ const sabre = storeSabres.sabre(props.id)
     <div class="sabre">
       <h1>{{ sabre.nom }}</h1>
 
-      <img :src="'/img/' + sabre.image" :alt="sabre.nom">
+      <img :src="'/img/' + sabre.image" :alt="sabre.nom" />
 
       <p>{{ sabre.description }}</p>
 
       <ul class="details">
         <li>Prix: {{ sabre.prix }} CHF</li>
         <li v-if="sabre.stock < 11">Stock: {{ sabre.stock }} pièces</li>
-        <li v-else >Stock: Plus de 10 pièces</li>
+        <li v-else>Stock: Plus de 10 pièces</li>
         <li>Longueur: {{ sabre.longueur }}cm</li>
         <li>Poids: {{ sabre.poids }}kg</li>
       </ul>
@@ -29,3 +29,30 @@ const sabre = storeSabres.sabre(props.id)
   </main>
 </template>
 
+<style scoped>
+/********** STYLE PAGE SABRE *********/
+.page-sabre .sabre {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.page-sabre .sabre img {
+  border: 6px solid #e72854;
+}
+
+.page-sabre ul.details {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.page-sabre ul.details li {
+  padding: 0.5em 1em;
+}
+
+.page-sabre ul.details li:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+</style>
