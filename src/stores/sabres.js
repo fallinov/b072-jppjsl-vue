@@ -82,9 +82,7 @@ export const useSabresStore = defineStore('sabres', {
     ]
   }),
   getters: {
-    // sabres: (state) => state,
     sabre: (state) => (id) => state.sabres.find(s => s.id === Number(id)),
-    // sabreAZ: (state) => structuredClone(state.sabres).sort((a, b) =>
-    // a.nom.localeCompare(b.nom)),
+    sabreAZ: (state) => state.sabres.sort((a, b) => a.nom.localeCompare(b.nom))
   }
 })
