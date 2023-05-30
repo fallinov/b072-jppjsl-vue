@@ -1,15 +1,14 @@
 <script setup>
 import {useSabresStore} from "@/stores/sabres";
-
+// Définition des propriétés du composant
 const props = defineProps(['id'])
-
-const store = useSabresStore()
-
-const sabre = store.sabre(props.id)
-
-console.log(sabre)
-
+// Récupération du magasin des sabres
+const storeSabres = useSabresStore()
+// Récupération des données du sabre à afficher en fonction de l'id passé en props
+// Pour rappel, on injecte l'id dans ce composant à partir de la route, de l'URL
+const sabre = storeSabres.sabre(props.id)
 </script>
+
 <template>
   <main class="page-sabre">
     <div class="sabre">

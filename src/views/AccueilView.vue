@@ -1,4 +1,6 @@
 <script setup>
+import SabreLaser from "@/components/SabreLaser.vue";
+
 const sabres = [
   {
     id: 445,
@@ -83,25 +85,12 @@ const sabres = [
     <h1>Découvrez nos sabres <strong>LASER</strong></h1>
 
     <ul class="sabres">
-      <li
-          v-for="sabre in sabres"
-          :key="sabre.id"
-          :class="{'rupture': sabre.stock < 1}">
-        <router-link :to="{ name: 'sabre', params: { id: sabre.id }}">
-          <figure>
-            <img :src="'/img/' + sabre.image" :alt="sabre.nom">
-            <figcaption>
-              <p v-if="sabre.stock < 1">Noooon, les stocks sont vides !</p>
-              <h2>{{ sabre.nom }}</h2>
-              <div class="prix">{{ sabre.prix }} CHF</div>
-            </figcaption>
-          </figure>
-        </router-link>
-      </li>
+      <SabreLaser
+        v-for="sabre in sabres"
+        :key="sabre.id"
+        :sabre="sabre"
+      />
     </ul>
   </main>
 </template>
 
-<style scoped>
-
-</style>
