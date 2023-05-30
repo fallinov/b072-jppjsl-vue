@@ -1,24 +1,13 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import PageHeader from "@/components/PageHeader.vue";
+import PageFooter from "@/components/PageFooter.vue";
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+  <PageHeader />
   <RouterView />
-
- <footer>
-      <div class="wrapper">
-        <p>&copy;2023 JPPJSL</p>
-      </div>
-  </footer>
+  <PageFooter />
 </template>
 
 <style scoped>

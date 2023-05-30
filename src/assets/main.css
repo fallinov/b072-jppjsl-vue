@@ -1,0 +1,216 @@
+@import "normalize.css";
+
+/********** STYLE GENERAL *********/
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    background: #fff;
+    color: #3b3d40
+}
+
+h1 {
+    font-weight: 800;
+    text-align: center;
+    color: #e72854;
+    margin-bottom: 2em;
+}
+
+h1 strong {
+    text-shadow: 0 0.03rem 0.06rem rgba(231, 40, 84, 0.5), 0 0.1rem 0.3rem rgba(231, 40, 84, 0.5);
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #e72854;
+}
+
+a:hover {
+    color: #6bbbda;
+}
+
+strong {
+    color: #6bbbda;
+}
+
+.bouton,
+[type="submit"],
+[type="reset"],
+button {
+    color: white;
+    padding: 1em;
+    background-color: #e72854;
+    border: none;
+    cursor: pointer;
+}
+
+.bouton:hover,
+[type="submit"]:hover,
+[type="reset"]:hover,
+button:hover {
+    background-color: #6bbbda;
+}
+
+/********** STYLE HEADER *********/
+header {
+    background-color: #eeeeee;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header .logo {
+    max-height: 150px;
+}
+
+/********** STYLE NAVIGATION *********/
+
+header nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-left: auto;
+}
+
+header nav a {
+    font-size: 1.25rem;
+    padding: 1em;
+    font-weight: bold;
+    color: #3b3d40;
+}
+
+header nav a.actif {
+    color: #6bbbda;
+}
+
+header nav a:hover {
+    color: #e72854;
+}
+
+/********** STYLE CONTENU PRINCIPAL *********/
+main {
+    padding: 1rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/********** STYLE FOOTER *********/
+footer {
+    background-color: #27282a;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+/********** STYLE PAGE ACCUEIL *********/
+.page-accueil .sabres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-content: space-evenly;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.page-accueil .sabres li {
+    overflow: hidden;
+    flex: 2 0 300px;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 0.03rem 0.06rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #e72854;
+}
+
+.page-accueil .sabres li:hover {
+    box-shadow: 0 0.03rem 0.06rem rgba(0, 0, 0, 0.6), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.6);
+    background-color: #6bbbda;
+}
+
+.page-accueil .sabres li.rupture {
+    background-color: #27282a;
+}
+
+.page-accueil .sabres figure {
+    padding: 0;
+    margin: 0;
+}
+
+.page-accueil .sabres figcaption {
+    padding: 1rem;
+    color: white;
+}
+
+
+/********** STYLE PAGE SERVICE CLIENTS *********/
+.page-service-client {
+    max-width: 660px;
+    margin: 0 auto;
+}
+.page-service-client .manuels {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.page-service-client .manuels a {
+    transition: all 0.2s ease-in-out;
+}
+
+.page-service-client .manuels a:hover {
+    transform: scale(1.1);
+}
+
+.page-service-client .manuels img {
+    max-width: 190px;
+}
+
+/********** STYLE PAGE SABRE *********/
+.page-sabre .sabre {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.page-sabre .sabre img {
+    border: 6px solid #e72854;
+}
+
+.page-sabre ul.details {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.page-sabre ul.details li {
+    padding: .5em 1em;
+}
+
+.page-sabre ul.details li:nth-child(odd) {
+    background-color: #eeeeee;
+}
