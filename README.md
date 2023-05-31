@@ -109,15 +109,18 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
   ```
 * Créer une propriété `id` dans le composant `FicheSabreView.vue`
   `const props = defineProps(['id'])`
-* Modifier le lien sur les sabres pour accéder à la page de détail du 
-  sabre avec un `<router-link>` qui passera l'id du sabre. 
-  Par exemple pour afficher le sabre 35: `<router-link to="/sabre/35">`
+* Tourjous dans `FicheSabreView.vue` afficher l'identifiant du sabre 
+  passé par la route et l'afficher comme titre principal. 
+ `<h1>Sabre n°{{ id }}</h1>`
+* Tester le fonctionnement en passant manuellement un id dans l'URL
+  * http://localhost:5173/sabre/67
+  * http://localhost:5173/sabre/445
+* Dans `SabreLaser.vue`, modifier le lien vers les sabres en y ajoutant
+  l'id du sabre avec un `<router-link>`. 
+  Par exemple pour afficher le sabre 35: `<router-link to="/sabre/445">`
   * De manière dynamique, l'on passera l'identifiant du sabre dans le lien 
     ainsi : `<router-link :to="'/sabre/' + sabre.id">`
   * Ou encore mieux : `<router-link :to="{ name: 'sabre', params: { id: sabre.id } }">`
-* Dans le composant `FicheSabreView.vue` récupérer l'identifiant du sabre et 
-  l'afficher comme titre principal. `<h1>{{ id }}</h1>`
-* Tester le fonctionnement en passant manuellement un id dans l'URL
 * Tester en cliquant sur les sabres de la page d'accueil
 ---
 
