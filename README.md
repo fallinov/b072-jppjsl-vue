@@ -22,7 +22,6 @@ npm run format
 npm run lint
 ```
 
-
 ## Objectif
 Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_ 
 que vous trouverez dans le dossier `_sources/` de ce dépôt.
@@ -77,6 +76,7 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
 ---
 
 ### 4. Intégration des données pour la liste des sabres
+![acceuil.png](_medias%2Facceuil.png)
 * Ajouter le tableau JavaScript des sabres du fichier `_sources/sabres.js` dans 
   `AccueilView.vue`.
 * Parcourir le tableau des sabres pour afficher les informations de chaque sabre.
@@ -96,6 +96,7 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
 ---
 
 ### 5. Fiche de détail (fiche d'un sabre)
+![fiche-id.png](_medias%2Ffiche-id.png)
 * Dans `router/index.js` déclarer un paramètre `id` dans la route 
   `/sabre/:id` et activer l'injection automatique de ce paramètre dans le 
   composant `FicheSabreView.vue` via la propriété
