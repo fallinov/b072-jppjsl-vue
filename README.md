@@ -27,19 +27,7 @@ npm run lint
 Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_ 
 que vous trouverez dans le dossier `_sources/` de ce dépôt.
 
-[Voir le site en action](_sources/index.html)
-
-### Particularités liés au stock
-Dans la liste des sabres, sur la page d'accueil, 
-si un sabre a un **stock inférieur à 1**, on y ajoute la classe CSS `rupture` 
-et on affiche le paragraphe suivant juste avant son titre `<h2>`.
-```html 
-<p>Noooon, les stocks sont vides !</p>
-```
----
-Dans la fiche de détail d'un sabre, si un sabre à un `stock plus grand que 10`,
-on n'affichera pas le nombre en stock, mais la phrase suivante.
-`<li>Stock: plus de 10 pièces</li>`.
+[Page d'accueil `_sources/index.html` ](_sources/index.html)
 
 ## Etapes
 
@@ -95,6 +83,16 @@ on n'affichera pas le nombre en stock, mais la phrase suivante.
 * Créer un composant `SabreLaser.vue` pour afficher les informations d'un sabre.
 * Intégrer le composant `SabreLaser.vue` dans `AccueilView.vue` pour 
   afficher les sabres en lui passant les informations du sabre en props.
+
+#### Particularités liées au stock
+Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
+* Ajouter la classe CSS `rupture` à la `<div class="sabre">`
+  * Le plus simple est d'utiliser la liaison de classe :
+    https://fr.vuejs.org/guide/essentials/class-and-style.html#binding-html-classes
+* Ajouter le paragraphe suivant juste avant le titre `<h2>` du sabre
+```html 
+<p>Noooon, les stocks sont vides !</p>
+```
 ---
 
 ### 5. Fiche de détail (fiche d'un sabre)
@@ -270,3 +268,10 @@ on n'affichera pas le nombre en stock, mais la phrase suivante.
   const sabre = storeSabres.getSabreById(props.id)
   </script>
   ```
+#### Particularités liées au stock
+Dans la fiche de détail d'un sabre, si un sabre à un `stock plus grand que 10`,
+on affichera phrase suivante à la place de la quantité exacte afin de ne pas 
+donner trop d'informations à nos concurrents :) 
+```html 
+<li>Stock: plus de 10 pièces</li>
+```
