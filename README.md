@@ -1,20 +1,33 @@
-# Je peux pas, j'ai sabre laser
+# Exercice "Je peux pas, j'ai sabre laser"
+
+## Commandes
+### Installer les libraires
+```sh
+npm install
+```
+### Démarrer le serveur de développement
+```sh
+npm run dev
+```
+### Créer une version de production
+```sh
+npm run build
+```
+### Reformatter le code avec [Prettier](https://prettier.io/)
+```sh
+npm run format
+```
+### Analyser votre code avec with [ESLint](https://eslint.org/)
+```sh
+npm run lint
+```
+
 
 ## Objectif
 Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_ 
 que vous trouverez dans le dossier `_sources/` de ce dépôt.
 
-### Particularités liés au stock
-Dans la liste des sabres, sur la page d'accueil, 
-si un sabre a un **stock inférieur à 1**, on y ajoute la classe CSS `rupture` 
-et on affiche le paragraphe suivant juste avant son titre `<h2>`.
-```html 
-<p>Noooon, les stocks sont vides !</p>
-```
----
-Dans la fiche de détail d'un sabre, si un sabre à un `stock plus grand que 10`,
-on n'affichera pas le nombre en stock, mais la phrase suivante.
-`<li>Stock: plus de 10 pièces</li>`.
+[Page d'accueil `_sources/index.html` ](_sources/index.html)
 
 ## Etapes
 
@@ -70,6 +83,16 @@ on n'affichera pas le nombre en stock, mais la phrase suivante.
 * Créer un composant `SabreLaser.vue` pour afficher les informations d'un sabre.
 * Intégrer le composant `SabreLaser.vue` dans `AccueilView.vue` pour 
   afficher les sabres en lui passant les informations du sabre en props.
+
+#### Particularités liées au stock
+Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
+* Ajouter la classe CSS `rupture` à la `<div class="sabre">`
+  * Le plus simple est d'utiliser la liaison de classe :
+    https://fr.vuejs.org/guide/essentials/class-and-style.html#binding-html-classes
+* Ajouter le paragraphe suivant juste avant le titre `<h2>` du sabre
+```html 
+<p>Noooon, les stocks sont vides !</p>
+```
 ---
 
 ### 5. Fiche de détail (fiche d'un sabre)
@@ -245,26 +268,30 @@ on n'affichera pas le nombre en stock, mais la phrase suivante.
   const sabre = storeSabres.getSabreById(props.id)
   </script>
   ```
+#### Particularités liées au stock
+Dans la fiche de détail d'un sabre, si un sabre à un `stock plus grand que 10`,
+on affichera phrase suivante à la place de la quantité exacte afin de ne pas 
+donner trop d'informations à nos concurrents :) 
+```html 
+<li>Stock: plus de 10 pièces</li>
+```
+## Pour aller plus loin
+Voici quelques pistes pour aller plus loin dans le développement de ce projet :
+* Ajouter un système de panier
+  * Créer un magasin `panier.js`
+  * Ajouter un bouton "Ajouter au panier" à `FicheSabreView.vue` et `SabreLaser.vue`
+  * Ajouter un bouton "Voir le panier" dans le menu
+  * Créer une vue `PanierView.vue` qui affiche le contenu du panier
+  * Afficher le total du panier dans l'entête du site
+* Ajouter un système de connexion, d'authentification
+  * Permet de distinguer les clients des administrateurs
+* Ajouter une partie administration
+  * Formulaire d'ajout de sabre
+  * Formulaire de modification de sabre
+  * Suppression de sabre
+* Sauvegarder les données sur le poste client
+  * Utiliser le localStorage
+* Sauvegarder toutes les données de manière pérène
+  * Créer une base de données
+  * Créer une API
 
-
-## Commandes
-### Installer les libraires
-```sh
-npm install
-```
-### Démarrer le serveur de développement
-```sh
-npm run dev
-```
-### Créer une version de production
-```sh
-npm run build
-```
-### Reformatter le code avec [Prettier](https://prettier.io/)
-```sh
-npm run format
-```
-### Analyser votre code avec with [ESLint](https://eslint.org/)
-```sh
-npm run lint
-```
