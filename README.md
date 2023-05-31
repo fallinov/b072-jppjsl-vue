@@ -1,8 +1,33 @@
-# Je peux pas, j'ai sabre laser
+# Exercice "Je peux pas, j'ai sabre laser"
+
+## Commandes
+### Installer les libraires
+```sh
+npm install
+```
+### Démarrer le serveur de développement
+```sh
+npm run dev
+```
+### Créer une version de production
+```sh
+npm run build
+```
+### Reformatter le code avec [Prettier](https://prettier.io/)
+```sh
+npm run format
+```
+### Analyser votre code avec with [ESLint](https://eslint.org/)
+```sh
+npm run lint
+```
+
 
 ## Objectif
 Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_ 
 que vous trouverez dans le dossier `_sources/` de ce dépôt.
+
+[Voir le site en action](_sources/index.html)
 
 ### Particularités liés au stock
 Dans la liste des sabres, sur la page d'accueil, 
@@ -245,26 +270,3 @@ on n'affichera pas le nombre en stock, mais la phrase suivante.
   const sabre = storeSabres.getSabreById(props.id)
   </script>
   ```
-
-
-## Commandes
-### Installer les libraires
-```sh
-npm install
-```
-### Démarrer le serveur de développement
-```sh
-npm run dev
-```
-### Créer une version de production
-```sh
-npm run build
-```
-### Reformatter le code avec [Prettier](https://prettier.io/)
-```sh
-npm run format
-```
-### Analyser votre code avec with [ESLint](https://eslint.org/)
-```sh
-npm run lint
-```
