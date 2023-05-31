@@ -23,7 +23,7 @@ npm run lint
 ```
 
 ## Objectif
-Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_ 
+Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_
 que vous trouverez dans le dossier `_sources/` de ce dépôt.
 
 [Page d'accueil `_sources/index.html` ](_sources/index.html)
@@ -39,18 +39,20 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
   * Supprimer tout le CSS de `src/App.vue`
   * Supprimer tout le HTML de `src/App.vue`, ne garder que <router-view />
   * Supprimer les JavaScripts inutile dans `src/App.vue`
-* Intégrer le **CSS** et les **médias** (images, icônes) du site dans 
-  l'application. N'oubliez d'importer `normalize.css`
+* Intégrer le **CSS** et les **médias** (images, icônes) du site dans
+  l'application.
   * Copier les fichiers CSS dans `src/assets/`
+    * Importer `normalize.css` dans à la première ligne de `src/assets/main.
+      css` avec la commande `@import "normalize.css";`
   * Copier les médias (image et icônes) dans `public/`
     * Mettre les images dans `public/img/`
-* Modifier le **titre** de l'application dans `src/index.html`
+* Modifier le **titre** de l'application dans `index.html`
   * `<title>J&#039;peux pas j&#039;ai sabre laser</title>`
 ---
 
 ### 2. Création des vues et des routes
 * Créer les composants suivants pour les trois pages, vues, en y ajoutant
-  simplement un titre. `<h1>Accueil</h1>` par exemple pour `AccueilView.vue`.
+  un simple titre de niveau 1. Par exemple `<h1>Accueil</h1>` pour `AccueilView.vue`.
   * `AccueilView.vue`
   * `ServiceClientView.vue`
   * `FicheSabreView.vue`
@@ -77,11 +79,11 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
 
 ### 4. Intégration des données pour la liste des sabres
 ![acceuil.png](_medias%2Facceuil.png)
-* Ajouter le tableau JavaScript des sabres du fichier `_sources/sabres.js` dans 
+* Ajouter le tableau JavaScript des sabres du fichier `_sources/sabres.js` dans
   `AccueilView.vue`.
 * Parcourir le tableau des sabres pour afficher les informations de chaque sabre.
 * Créer un composant `SabreLaser.vue` pour afficher les informations d'un sabre.
-* Intégrer le composant `SabreLaser.vue` dans `AccueilView.vue` pour 
+* Intégrer le composant `SabreLaser.vue` dans `AccueilView.vue` pour
   afficher les sabres en lui passant les informations du sabre en props.
 
 #### Particularités liées au stock
@@ -97,8 +99,8 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
 
 ### 5. Fiche de détail (fiche d'un sabre)
 ![fiche-id.png](_medias%2Ffiche-id.png)
-* Dans `router/index.js` déclarer un paramètre `id` dans la route 
-  `/sabre/:id` et activer l'injection automatique de ce paramètre dans le 
+* Dans `router/index.js` déclarer un paramètre `id` dans la route
+  `/sabre/:id` et activer l'injection automatique de ce paramètre dans le
   composant `FicheSabreView.vue` via la propriété
   ```javascript
   {
@@ -110,13 +112,13 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
   ```
 * Créer une propriété `id` dans le composant `FicheSabreView.vue`
   `const props = defineProps(['id'])`
-* Modifier le lien sur les sabres pour accéder à la page de détail du 
-  sabre avec un `<router-link>` qui passera l'id du sabre. 
+* Modifier le lien sur les sabres pour accéder à la page de détail du
+  sabre avec un `<router-link>` qui passera l'id du sabre.
   Par exemple pour afficher le sabre 35: `<router-link to="/sabre/35">`
-  * De manière dynamique, l'on passera l'identifiant du sabre dans le lien 
+  * De manière dynamique, l'on passera l'identifiant du sabre dans le lien
     ainsi : `<router-link :to="'/sabre/' + sabre.id">`
   * Ou encore mieux : `<router-link :to="{ name: 'sabre', params: { id: sabre.id } }">`
-* Dans le composant `FicheSabreView.vue` récupérer l'identifiant du sabre et 
+* Dans le composant `FicheSabreView.vue` récupérer l'identifiant du sabre et
   l'afficher comme titre principal. `<h1>{{ id }}</h1>`
 * Tester le fonctionnement en passant manuellement un id dans l'URL
 * Tester en cliquant sur les sabres de la page d'accueil
@@ -240,7 +242,7 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
     }
   })
   ```
-* Utiliser le magasin Pinia dans `AccueilView.vue` pour récupérer la liste des 
+* Utiliser le magasin Pinia dans `AccueilView.vue` pour récupérer la liste des
   sabres triés par ordre alphabétique avec le getter `getSabresAZ`.
   ```html
   <script setup>
@@ -254,7 +256,7 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
   const sabres = storeSabres.getSabresAZ
   </script>
   ```
-* Utiliser le magasin Pinia dans `FicheSabreView.vue` pour récupérer les 
+* Utiliser le magasin Pinia dans `FicheSabreView.vue` pour récupérer les
   informations du sabre.
   ```html
   <script setup>
@@ -271,8 +273,8 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
   ```
 #### Particularités liées au stock
 Dans la fiche de détail d'un sabre, si un sabre à un `stock plus grand que 10`,
-on affichera phrase suivante à la place de la quantité exacte afin de ne pas 
-donner trop d'informations à nos concurrents :) 
+on affichera phrase suivante à la place de la quantité exacte afin de ne pas
+donner trop d'informations à nos concurrents :)
 ```html 
 <li>Stock: plus de 10 pièces</li>
 ```
