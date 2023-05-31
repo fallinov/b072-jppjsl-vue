@@ -275,3 +275,23 @@ donner trop d'informations à nos concurrents :)
 ```html 
 <li>Stock: plus de 10 pièces</li>
 ```
+## Pour aller plus loin
+Voici quelques pistes pour aller plus loin dans le développement de ce projet :
+* Ajouter un système de panier
+  * Créer un magasin `panier.js`
+  * Ajouter un bouton "Ajouter au panier" à `FicheSabreView.vue` et `SabreLaser.vue`
+  * Ajouter un bouton "Voir le panier" dans le menu
+  * Créer une vue `PanierView.vue` qui affiche le contenu du panier
+  * Afficher le total du panier dans l'entête du site
+* Ajouter un système de connexion, d'authentification
+  * Permet de distinguer les clients des administrateurs
+* Ajouter une partie administration
+  * Formulaire d'ajout de sabre
+  * Formulaire de modification de sabre
+  * Suppression de sabre
+* Sauvegarder les données sur le poste client
+  * Utiliser le localStorage
+* Sauvegarder toutes les données de manière pérène
+  * Créer une base de données
+  * Créer une API
+
