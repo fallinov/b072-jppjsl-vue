@@ -22,7 +22,6 @@ npm run format
 npm run lint
 ```
 
-
 ## Objectif
 Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_ 
 que vous trouverez dans le dossier `_sources/` de ce dépôt.
@@ -77,6 +76,7 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
 ---
 
 ### 4. Intégration des données pour la liste des sabres
+![acceuil.png](_medias%2Facceuil.png)
 * Ajouter le tableau JavaScript des sabres du fichier `_sources/sabres.js` dans 
   `AccueilView.vue`.
 * Parcourir le tableau des sabres pour afficher les informations de chaque sabre.
@@ -96,6 +96,7 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
 ---
 
 ### 5. Fiche de détail (fiche d'un sabre)
+![fiche-id.png](_medias%2Ffiche-id.png)
 * Dans `router/index.js` déclarer un paramètre `id` dans la route 
   `/sabre/:id` et activer l'injection automatique de ce paramètre dans le 
   composant `FicheSabreView.vue` via la propriété
@@ -109,18 +110,15 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
   ```
 * Créer une propriété `id` dans le composant `FicheSabreView.vue`
   `const props = defineProps(['id'])`
-* Tourjous dans `FicheSabreView.vue` afficher l'identifiant du sabre 
-  passé par la route et l'afficher comme titre principal. 
- `<h1>Sabre n°{{ id }}</h1>`
-* Tester le fonctionnement en passant manuellement un id dans l'URL
-  * http://localhost:5173/sabre/67
-  * http://localhost:5173/sabre/445
-* Dans `SabreLaser.vue`, modifier le lien vers les sabres en y ajoutant
-  l'id du sabre avec un `<router-link>`. 
-  Par exemple pour afficher le sabre 35: `<router-link to="/sabre/445">`
+* Modifier le lien sur les sabres pour accéder à la page de détail du 
+  sabre avec un `<router-link>` qui passera l'id du sabre. 
+  Par exemple pour afficher le sabre 35: `<router-link to="/sabre/35">`
   * De manière dynamique, l'on passera l'identifiant du sabre dans le lien 
     ainsi : `<router-link :to="'/sabre/' + sabre.id">`
   * Ou encore mieux : `<router-link :to="{ name: 'sabre', params: { id: sabre.id } }">`
+* Dans le composant `FicheSabreView.vue` récupérer l'identifiant du sabre et 
+  l'afficher comme titre principal. `<h1>{{ id }}</h1>`
+* Tester le fonctionnement en passant manuellement un id dans l'URL
 * Tester en cliquant sur les sabres de la page d'accueil
 ---
 
