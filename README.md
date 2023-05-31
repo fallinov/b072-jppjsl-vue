@@ -40,17 +40,19 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
   * Supprimer tout le HTML de `src/App.vue`, ne garder que <router-view />
   * Supprimer les JavaScripts inutile dans `src/App.vue`
 * Intégrer le **CSS** et les **médias** (images, icônes) du site dans 
-  l'application. N'oubliez d'importer `normalize.css`
+  l'application.
   * Copier les fichiers CSS dans `src/assets/`
+    * Importer `normalize.css` dans à la première ligne de `src/assets/main.
+      css` avec la commande `@import "normalize.css";`
   * Copier les médias (image et icônes) dans `public/`
     * Mettre les images dans `public/img/`
-* Modifier le **titre** de l'application dans `src/index.html`
+* Modifier le **titre** de l'application dans `index.html`
   * `<title>J&#039;peux pas j&#039;ai sabre laser</title>`
 ---
 
 ### 2. Création des vues et des routes
 * Créer les composants suivants pour les trois pages, vues, en y ajoutant
-  simplement un titre. `<h1>Accueil</h1>` par exemple pour `AccueilView.vue`.
+  un simple titre de niveau 1. Par exemple `<h1>Accueil</h1>` pour `AccueilView.vue`.
   * `AccueilView.vue`
   * `ServiceClientView.vue`
   * `FicheSabreView.vue`
