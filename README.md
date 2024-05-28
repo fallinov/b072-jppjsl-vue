@@ -28,24 +28,47 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
 
 [Page d'accueil `_sources/index.html` ](_sources/index.html)
 
-## Etapes
+### Résultat final attendu
+![acceuil.png](_medias%2Facceuil.png)
 
+## Etapes
 ### 1. Initialisation
 * Nettoyer le projet, suppression des fichiers inutiles (CSS, composants, ...)
   * Supprimer le fichier `src/assets/base.css`
-  * Vider le fichier `src/assets/main.css`
   * Supprimer tous les fichiers dans `public/`
-  * Supprimer tous les fichiers dans `src/components/`
-  * Supprimer tout le CSS de `src/App.vue`
-  * Supprimer tout le HTML de `src/App.vue`, ne garder que <router-view />
-  * Supprimer le `import HelloWorld` inutile dans le `<script setup>` de `src/App.vue`
+  * Supprimer tous les dossiers et fichiers dans `src/components/`
+  * Remplacer le contenu de `src/App.vue` avec le contenu suivant :
+    ```html
+    <script setup>
+    import { RouterLink, RouterView } from 'vue-router'
+    </script>
+    
+    <template>
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    
+    
+      <RouterView />
+    </template>
+    
+    <style scoped>
+    
+    </style>
+    ```
 * Intégrer le **CSS** et les **médias** (images, icônes) du site dans l'application.
-  * Copier les fichiers CSS dans `src/assets/`
+  * Copier les fichiers CSS du dossier `_sources/css/` dans `src/assets/`
+    * Ecraser le fichier `src/assets/main.css` avec le contenu du fichier `_sources/css/main.css`
   * Copier les médias (image et icônes) dans `public/`
-    * Mettre les images dans `public/img/`
+    * Copier le dossier des images `_sources/img/` dans `public/`
+    * Copier le fichier d'icône `_sources/favicon.ico` dans `public/`
 * Modifier le **titre** de l'application dans `index.html`
   * `<title>J&#039;peux pas j&#039;ai sabre laser</title>`
 ---
+
+> **Note** : A ce stade l'application doit afficher l'erreur suivante
+> car nous avons supprimé les 
 
 ### 2. Création des vues et des routes
 * Créer les composants suivants pour les trois pages, vues, en y ajoutant
