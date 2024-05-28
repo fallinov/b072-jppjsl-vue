@@ -23,12 +23,12 @@ npm run lint
 ```
 
 ## Objectif
-Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_
-que vous trouverez dans le dossier `_sources/` de ce dépôt et en **suivant
-les consignes ci-dessous** et en vous aidant du
-**support de cours sur [Vue Router](https://divtec.gitbook.io/vuejs/vue-router)**.
+Transformer le site _Je peux pas, j'ai sabre laser_
+que vous trouverez dans le dossier `_sources/` de ce dépôt en application Vue.js.
 
-[Page d'accueil `_sources/index.html` ](_sources/index.html)
+Comment y parvenir ?
+1. Lire le support de cours sur [Vue Router](https://divtec.gitbook.io/vuejs/vue-router)**.
+2. Suivre attentivement les consignes de ce fichier
 
 ### Résultat final attendu
 ![acceuil.png](_medias%2Facceuil.png)
