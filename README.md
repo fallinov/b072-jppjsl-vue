@@ -64,17 +64,13 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
 * Remplacer le contenu de `src/views/HomeView.vue` avec le contenu suivant :
   ```html
   <template>
-    <div>
-      <h1>Accueil</h1>
-    </div>
+    <h1>Accueil</h1>
   </template>
   ```
 * Remplacer le contenu de `src/views/About.vue` avec le contenu suivant :
   ```html
   <template>
-    <div>
-      <h1>About</h1>
-    </div>
+    <h1>About</h1>
   </template>
   ```
 * Intégrer le **CSS** et les **médias** (images, icônes) du site dans l'application.
