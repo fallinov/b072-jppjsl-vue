@@ -167,6 +167,9 @@ A ce stade, vous devriez avoir une application qui ressemble au
 résultat ci-dessous et qui vous permet de :
 * naviguer entre les pages `Accueil`, `Service Client` dans le menu
 * ouvrir la `Fiche Sabre` en cliquant sur un sabre de la page d'accueil.
+
+
+
 ---
 
 ### 4. Intégration des données pour la liste des sabres
