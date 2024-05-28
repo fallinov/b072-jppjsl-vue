@@ -57,6 +57,22 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
     
     </style>
     ```
+* Remplacer le contenu de `src/views/HomeView.vue` avec le contenu suivant :
+  ```html
+  <template>
+    <div>
+      <h1>Accueil</h1>
+    </div>
+  </template>
+  ```
+* Remplacer le contenu de `src/views/About.vue` avec le contenu suivant :
+  ```html
+  <template>
+    <div>
+      <h1>About</h1>
+    </div>
+  </template>
+  ```
 * Intégrer le **CSS** et les **médias** (images, icônes) du site dans l'application.
   * Copier les fichiers CSS du dossier `_sources/css/` dans `src/assets/`
     * Ecraser le fichier `src/assets/main.css` avec le contenu du fichier `_sources/css/main.css`
