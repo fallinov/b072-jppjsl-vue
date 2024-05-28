@@ -110,7 +110,18 @@ résultat ci-dessous et qui vous permet de naviguer entre les pages `Home` et `A
   * Accueil http://localhost:5173/
   * Service CLient http://localhost:5173/service-client
   * Fiche d'un sabre : http://localhost:5173/sabre/1
+* Modifier les liens vers vos pages dans le menu de navigation de `src/App.vue`
+  * `<router-link to="/">Accueil</router-link>`
+  * `<router-link to="/service-client">Service Client</router-link>`
+  * `<router-link to="/sabre/1">Fiche du sabre 1</router-link>`
+
+#### Résultat attendu
+A ce stade, vous devriez avoir une application qui ressemble au
+résultat ci-dessous et qui vous permet de naviguer entre les pages `Accueil`, `Service Client` et `Fiche du sabre 1`.
+![etape-2-resultat.png](_medias%2Fetape-2-resultat.png)
+
 ---
+
 
 ### 3. Intégration du code HTLM et CSS des pages
 * Créer les composants pour l'entête et le pied de page du site
