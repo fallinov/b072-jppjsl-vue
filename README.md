@@ -27,7 +27,7 @@ Transformer le site _Je peux pas, j'ai sabre laser_
 que vous trouverez dans le dossier `_sources/` de ce dépôt en application Vue.js.
 
 Comment y parvenir ?
-1. Lire le support de cours sur [Vue Router](https://divtec.gitbook.io/vuejs/vue-router)**.
+1. Lire le support de cours sur [Vue Router](https://divtec.gitbook.io/vuejs/vue-router).
 2. Suivre attentivement les consignes de ce fichier
 
 ### Résultat final attendu
@@ -132,10 +132,26 @@ résultat ci-dessous et qui vous permet de naviguer entre les pages `Accueil`, `
 
 
 ### 3. Intégration du code HTLM et CSS des pages
-* Créer les composants pour l'entête et le pied de page du site
-  * Remplacer les liens de navigation de l'entête par des `<router-link>`.
+Il faut maintenant intégrer le code HTML et CSS des pages du site dans les composants correspondants.
+Mais avant cela, nous allons créer les composants pour l'entête et le pied de page du site.
+* Dans le dossier `src/components/` créer les composants suivants
+  et y ajouter le code HTML et CSS correspondant :
+  * `EnteteDePage.vue` contient la balise `<header>` et son contenu
+  * `PiedDepage.vue` contient la balise `<footer>` et son contenu
+  * Ne pas oublier d'ajouter les styles CSS correspondants dans les composants.
+* Dans `EnteteDePage.vue` remplacer les liens de navigation par des `<router-link>`.
   * Ne pas oublier d'ajouter la class au lien actif. `<router-link class="active" to="/">Accueil</router-link>`
-* Intégrez les composants entête et pied de page dans `App.vue`
+    * Comment faire ? Voir la documentation : https://router.vuejs.org/guide/essentials/active-links
+* Intégrez les composants `EnteteDePage.vue` et `PiedDepage.vue` de page dans `App.vue`
+  ```html App.vue
+  <template>
+    <EnteteDePage />
+    <main>
+      <RouterView />
+    </main>
+    <PiedDepage />
+  </template>
+  ```
 * Tester la navigation entre les pages avec votre menu.
 * Intégrer le code HTML des pages dans les composants correspondants.
 * Intégrer le code CSS des pages dans les composants correspondants.
