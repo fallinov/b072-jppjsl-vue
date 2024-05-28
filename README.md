@@ -83,8 +83,10 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
   * `<title>J&#039;peux pas j&#039;ai sabre laser</title>`
 ---
 
-> **Note** : A ce stade l'application doit afficher l'erreur suivante
-> car nous avons supprimé les 
+#### Résultat attendu
+A ce stade, vous devriez avoir une application qui ressemble au
+résultat ci-dessous et qui vous permet de naviguer entre les pages `Home` et `About`.
+![etape-1-resultat.png](_medias%2Fetape-1-resultat.png)
 
 ### 2. Création des vues et des routes
 * Créer les composants suivants pour les trois pages, vues, en y ajoutant
