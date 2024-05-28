@@ -106,7 +106,7 @@ résultat ci-dessous et qui vous permet de naviguer entre les pages `Home` et `A
     * Composant à importer : `src/views/FicheSabreView.vue`
     * Nom de la route : `sabre`
   * **Ne pas oublier de supprimer les routes inutiles comme `/about` 
-    et l'importation des composants correspondants**
+    et l'importation des composants correspondants (HomeView)**
 * Tester le bon fonctionnement de vos routes :
   * Accueil http://localhost:5173/
   * Service CLient http://localhost:5173/service-client
