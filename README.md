@@ -169,7 +169,7 @@ résultat ci-dessous et qui vous permet de :
 * ouvrir la `Fiche Sabre` en cliquant sur un sabre de la page d'accueil.
 
 
-
+![etape-3-resultat.png](_medias%2Fetape-3-resultat.png)
 ---
 
 ### 4. Intégration des données pour la liste des sabres
