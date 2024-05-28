@@ -38,12 +38,9 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
   * Supprimer tous les fichiers dans `src/components/`
   * Supprimer tout le CSS de `src/App.vue`
   * Supprimer tout le HTML de `src/App.vue`, ne garder que <router-view />
-  * Supprimer les JavaScripts inutile dans `src/App.vue`
-* Intégrer le **CSS** et les **médias** (images, icônes) du site dans
-  l'application.
+  * Supprimer le `import HelloWorld` inutile dans le `<script setup>` de `src/App.vue`
+* Intégrer le **CSS** et les **médias** (images, icônes) du site dans l'application.
   * Copier les fichiers CSS dans `src/assets/`
-    * Importer `normalize.css` dans à la première ligne de `src/assets/main.
-      css` avec la commande `@import "normalize.css";`
   * Copier les médias (image et icônes) dans `public/`
     * Mettre les images dans `public/img/`
 * Modifier le **titre** de l'application dans `index.html`
