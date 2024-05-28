@@ -24,7 +24,8 @@ npm run lint
 
 ## Objectif
 Créer une application `Vue.js` à partir du site _Je peux pas, j'ai sabre laser_
-que vous trouverez dans le dossier `_sources/` de ce dépôt.
+que vous trouverez dans le dossier `_sources/` de ce dépôt en vous aidant du
+**support de cours sur [Vue Router](https://divtec.gitbook.io/vuejs/vue-router)**.
 
 [Page d'accueil `_sources/index.html` ](_sources/index.html)
 
