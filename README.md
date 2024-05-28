@@ -89,15 +89,23 @@ résultat ci-dessous et qui vous permet de naviguer entre les pages `Home` et `A
 ![etape-1-resultat.png](_medias%2Fetape-1-resultat.png)
 
 ### 2. Création des vues et des routes
-* Créer les composants suivants pour les trois pages, vues, en y ajoutant
+* Supprimer les composants `src/views/About.vue` et `src/views/HomeView.vue`
+* Créer les composants suivants pour les trois pages en y ajoutant
   un simple titre de niveau 1. Par exemple `<h1>Accueil</h1>` pour `AccueilView.vue`.
   * `AccueilView.vue`
   * `ServiceClientView.vue`
   * `FicheSabreView.vue`
-* Créer les routes pour les trois vues dans `router/index.js`
-  * `/` : `AccueilView.vue`
-  * `/service-client` : `ServiceClientView.vue`
-  * `/sabre/:id` : `FicheSabreView.vue` (:id est un paramètre dynamique)
+* Créer les routes pour les trois vues dans `src/router/index.js`
+  * `/`
+    * Composant à importer : `src/views/AccueilView.vue`
+    * Nom de la route : `home`
+  * `/service-client`
+    * Composant à importer : `src/views/ServiceClientView.vue`
+    * Nom de la route : `service-client`
+  * `/sabre/:id` (:id est un paramètre de route dynamique)
+    * Composant à importer : `src/views/FicheSabreView.vue`
+    * Nom de la route : `sabre`
+  * **Ne pas oublier de supprimer les routes inutiles comme `/about`**
 * Tester le bon fonctionnement de vos routes :
   * Accueil http://localhost:5173/
   * Service CLient http://localhost:5173/service-client
