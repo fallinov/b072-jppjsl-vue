@@ -140,10 +140,11 @@ Mais avant cela, nous allons créer les composants pour l'entête et le pied de 
   * `PiedDepage.vue` contient la balise `<footer>` et son contenu
   * Ne pas oublier d'ajouter les styles CSS correspondants dans les composants.
 * Dans `EnteteDePage.vue` remplacer les liens de navigation par des `<router-link>`.
+  * Ne pas oublier le lien du logo
   * Ne pas oublier d'ajouter la class au lien actif. `<router-link class="active" to="/">Accueil</router-link>`
     * Comment faire ? Voir la documentation : https://router.vuejs.org/guide/essentials/active-links
 * Intégrez les composants `EnteteDePage.vue` et `PiedDepage.vue` de page dans `App.vue`
-  ```html App.vue
+  ```html
   <template>
     <EnteteDePage />
     <main>
@@ -152,10 +153,20 @@ Mais avant cela, nous allons créer les composants pour l'entête et le pied de 
     <PiedDepage />
   </template>
   ```
-* Tester la navigation entre les pages avec votre menu.
+* Tester la navigation entre les pages avec votre nouveau menu.
 * Intégrer le code HTML des pages dans les composants correspondants.
+    * `AccueilView.vue`
+      * Remplacer le lien vers la page de détail du sabre par un `<router-link>`.
+    * `ServiceClientView.vue`
+    * `FicheSabreView.vue`
 * Intégrer le code CSS des pages dans les composants correspondants.
 * Tester que l'affichage des pages est correct.
+
+#### Résultat attendu
+A ce stade, vous devriez avoir une application qui ressemble au
+résultat ci-dessous et qui vous permet de :
+* naviguer entre les pages `Accueil`, `Service Client` dans le menu
+* ouvrir la `Fiche Sabre` en cliquant sur un sabre de la page d'accueil.
 ---
 
 ### 4. Intégration des données pour la liste des sabres
