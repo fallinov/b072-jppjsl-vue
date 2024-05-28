@@ -40,27 +40,26 @@ que vous trouverez dans le dossier `_sources/` de ce dépôt.
   * Remplacer le contenu de `src/App.vue` avec le contenu suivant :
     ```html
     <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
+    import { RouterLink, RouterView } from 'vue-router'
+    </script>
 
-<template>
-  <header>
-    <nav>
-      <ul>
-        <li><RouterLink to="/">Home</RouterLink></li>
-        <li><RouterLink to="/about">About</RouterLink></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <RouterView />
-  </main>
-</template>
-
-<style scoped>
-
-</style>
-
+    <template>
+      <header>
+        <nav>
+          <ul>
+            <li><RouterLink to="/">Home</RouterLink></li>
+            <li><RouterLink to="/about">About</RouterLink></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <RouterView />
+      </main>
+    </template>
+    
+    <style scoped>
+    
+    </style>
     ```
 * Remplacer le contenu de `src/views/HomeView.vue` avec le contenu suivant :
   ```html
