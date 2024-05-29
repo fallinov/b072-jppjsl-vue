@@ -137,7 +137,7 @@ Il faut maintenant intégrer le code HTML et CSS des pages du site dans les comp
 * `ServiceClientView.vue` contiendra le code HTML et CSS de la page de service client `_sources/service-client.html`
 * `FicheSabreView.vue` contiendra le code HTML et CSS de la page de détail d'un sabre `_sources/sabre.html`
 
-Comme l'en-tête et le pied de page sont présents sur toutes les pages,
+Comme l'en-tête et le pied de page sont identiques sur toutes les pages,
 nous allons les extraire dans des composants séparés puis les intégrer dans `App.vue`.
 
 Il ne restera donc plus qu'à intégrer le contenu de la balise `<main>` des différentes pages
