@@ -134,6 +134,12 @@ résultat ci-dessous et qui vous permet de naviguer entre les pages `Accueil`, `
 ### 3. Intégration du code HTLM et CSS des pages
 Il faut maintenant intégrer le code HTML et CSS des pages du site dans les composants correspondants.
 Mais avant cela, nous allons créer les composants pour l'entête et le pied de page du site.
+
+> **Note :** Pour accéder à une image dans le dossier `public/`
+> toujours commencer par `/` suivi du chemin relatif au fichier.
+> Par exemple, pour accéder à l'image `sl-vad.jpg` dans le dossier `public/img/`
+> on utilisera `<img src="/img/sl-vad.jpg" alt="SL-VAD">`
+
 * Dans le dossier `src/components/` créer les composants suivants
   et y ajouter le code HTML et CSS correspondant :
   * `EnteteDePage.vue` contient la balise `<header>` et son contenu
@@ -156,7 +162,9 @@ Mais avant cela, nous allons créer les composants pour l'entête et le pied de 
 * Tester la navigation entre les pages avec votre nouveau menu.
 * Intégrer le code HTML des pages dans les composants correspondants.
     * `AccueilView.vue`
-      * Remplacer le lien vers la page de détail du sabre par un `<router-link>`.
+      * Remplacer le lien vers la page de détail du sabre par un `<router-link to="/sabre/1"">`.
+      * Ne pas oublier de passer un identifiant de sabre dans la route (on met 1 à tous les sabres pour le moment),
+        sinon la page de détail ne s'affichera pas.
     * `ServiceClientView.vue`
     * `FicheSabreView.vue`
 * Intégrer le code CSS des pages dans les composants correspondants.
