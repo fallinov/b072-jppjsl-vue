@@ -133,7 +133,15 @@ résultat ci-dessous et qui vous permet de naviguer entre les pages `Accueil`, `
 
 ### 3. Intégration du code HTLM et CSS des pages
 Il faut maintenant intégrer le code HTML et CSS des pages du site dans les composants correspondants.
-Mais avant cela, nous allons créer les composants pour l'entête et le pied de page du site.
+* `AccueilView.vue` contiendra le code HTML et CSS de la page d'accueil `_sources/index.html`
+* `ServiceClientView.vue` contiendra le code HTML et CSS de la page de service client `_sources/service-client.html`
+* `FicheSabreView.vue` contiendra le code HTML et CSS de la page de détail d'un sabre `_sources/sabre.html`
+
+Comme l'en-tête et le pied de page sont présents sur toutes les pages,
+nous allons les extraire dans des composants séparés puis les intégrer dans `App.vue`.
+
+Il ne restera donc plus qu'à intégrer le contenu de la balise `<main>` des différentes pages
+dans les composants correspondants.
 
 > **Note :** Pour accéder à une image dans le dossier `public/`
 > toujours commencer par `/` suivi du chemin relatif au fichier.
