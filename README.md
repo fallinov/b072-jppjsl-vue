@@ -194,7 +194,8 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
 * Ajouter la classe CSS `rupture` à la `<div class="sabre">`
   * Le plus simple est d'utiliser la liaison de classe :
     https://fr.vuejs.org/guide/essentials/class-and-style.html#binding-html-classes
-* Ajouter le paragraphe suivant juste avant le titre `<h2>` du sabre
+* Ajouter le paragraphe suivant juste avant le titre `<h2>` du sabre,
+  comme c'est le cas pour le deuxième sabre de la maquette HTML.
 ```html 
 <p>Noooon, les stocks sont vides !</p>
 ```
@@ -202,9 +203,9 @@ Sur lapage d'acceuil, si un sabre a un **stock inférieur à 1** :
 
 ### 5. Fiche de détail (fiche d'un sabre)
 ![fiche-id.png](_medias%2Ffiche-id.png)
-* Dans `router/index.js` déclarer un paramètre `id` dans la route
-  `/sabre/:id` et activer l'injection automatique de ce paramètre dans le
-  composant `FicheSabreView.vue` via la propriété
+* Dans `router/index.js` déclarer un paramètre `id` dans la route 
+  `/sabre/:id` (normalement, c'est déjà fait) et activer l'injection automatique de ce paramètre dans le
+  composant `FicheSabreView.vue` via une propriété
   ```javascript
   {
       path: '/sabre/:id',
