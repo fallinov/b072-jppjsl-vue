@@ -161,9 +161,7 @@ dans les composants correspondants.
   ```html
   <template>
     <EnteteDePage />
-    <main>
-      <RouterView />
-    </main>
+    <RouterView />
     <PiedDepage />
   </template>
   ```
