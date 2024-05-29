@@ -18,10 +18,10 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/sabre/:id',
+      path: '/sabre/:id', // Paramètre id
       name: 'sabre',
       component: FicheSabreView,
-      props: true
+      props: true // passe le paramètre id dans les props
     }
   ]
 })

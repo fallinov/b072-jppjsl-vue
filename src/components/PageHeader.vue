@@ -1,8 +1,9 @@
-<script setup></script>
+<script setup>
+</script>
 
 <template>
   <header>
-    <router-link active-class="actif" to="/">
+    <router-link to="/">
       <img
         src="/img/logo-jppjsl.png"
         class="logo"
@@ -15,7 +16,7 @@
           <router-link active-class="actif" to="/">No sabres</router-link>
         </li>
         <li>
-          <router-link active-class="actif " to="/service-client"> Service Client </router-link>
+          <router-link active-class="actif" to="/service-client"> Service Client </router-link>
         </li>
       </ul>
     </nav>

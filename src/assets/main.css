@@ -131,38 +131,6 @@ footer {
     padding: 0;
 }
 
-.page-accueil .sabres .sabre {
-    overflow: hidden;
-    flex: 2 0 300px;
-    padding: 0;
-    border-radius: 10px;
-    box-shadow: 0 0.03rem 0.06rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
-    margin-bottom: 2rem;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    background-color: #e72854;
-}
-
-.page-accueil .sabres .sabre:hover {
-    box-shadow: 0 0.03rem 0.06rem rgba(0, 0, 0, 0.6), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.6);
-    background-color: #6bbbda;
-}
-
-.page-accueil .sabres .sabre.rupture {
-    background-color: #27282a;
-}
-
-.page-accueil .sabres .sabre figure {
-    padding: 0;
-    margin: 0;
-}
-
-.page-accueil .sabres .sabre figcaption {
-    padding: 1rem;
-    color: white;
-}
-
-
 /********** STYLE PAGE SERVICE CLIENTS *********/
 .page-service-client {
     max-width: 660px;
